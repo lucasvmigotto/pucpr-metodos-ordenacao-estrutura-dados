@@ -1,0 +1,58 @@
+{
+	"name": "${localWorkspaceFolderBasename}",
+	"image": "mcr.microsoft.com/devcontainers/java:1-21",
+	"runArgs": [
+        "--rm",
+        "--name", "vsc-${localWorkspaceFolderBasename}"
+        // "--env-file", ".env"
+    ],
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"mavenVersion": "3.8.6",
+			"installGradle": "false"
+		}
+	},
+    "customizations": {
+		"vscode": {
+			"settings": {
+				"java.format.settings.profile": "GoogleStyle",
+                "java.format.settings.imports.regexp": "^[a-z.]*",
+                "java.checkstyle.configuration": "https://raw.githubusercontent.com/google/styleguide/refs/heads/gh-pages/intellij-java-google-style.xml",
+                "java.checkstyle.version": "9.3",
+                "java.autobuild.enabled": true,
+                "[java]": {
+					"editor.formatOnSave": true,
+					"editor.defaultFormatter": "redhat.java"
+				},
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit"
+                }
+			},
+			"extensions": [
+				// Environment and Development
+				"redhat.java",
+				"Oracle.oracle-java",
+				"vscjava.vscode-maven",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-dependency",
+				// Style and Linting
+				"shengchen.vscode-checkstyle",
+				"DavidAnson.vscode-markdownlint",
+				// Utils
+				"EditorConfig.EditorConfig",
+				"mhutchie.git-graph",
+				"ryu1kn.partial-diff",
+				"mohsen1.prettify-json",
+				"njzy.stats-bar",
+				"DotJoshJohnson.xml",
+				"redhat.vscode-yaml",
+				"christian-kohler.path-intellisense",
+				// Miscellaneous
+				"streetsidesoftware.code-spell-checker",
+				"streetsidesoftware.code-spell-checker-portuguese-brazilian"
+			]
+		}
+	}
+}

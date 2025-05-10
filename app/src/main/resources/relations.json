@@ -1,0 +1,192 @@
+[
+    {
+        "origin": "agameofthrones",
+        "relatedTo": "aclashofkings",
+        "weight": 1
+    },
+    {
+        "origin": "agameofthrones",
+        "relatedTo": "astormofswords",
+        "weight": 2
+    },
+    {
+        "origin": "agameofthrones",
+        "relatedTo": "afeastforcrows",
+        "weight": 2
+    },
+    {
+        "origin": "agameofthrones",
+        "relatedTo": "adancewithdragons",
+        "weight": 2
+    },
+    {
+        "origin": "aclashofkings",
+        "relatedTo": "agameofthrones",
+        "weight": 1
+    },
+    {
+        "origin": "aclashofkings",
+        "relatedTo": "astormofswords",
+        "weight": 1
+    },
+    {
+        "origin": "aclashofkings",
+        "relatedTo": "afeastforcrows",
+        "weight": 2
+    },
+    {
+        "origin": "aclashofkings",
+        "relatedTo": "adancewithdragons",
+        "weight": 2
+    },
+    {
+        "origin": "astormofswords",
+        "relatedTo": "agameofthrones",
+        "weight": 2
+    },
+    {
+        "origin": "astormofswords",
+        "relatedTo": "aclashofkings",
+        "weight": 1
+    },
+    {
+        "origin": "astormofswords",
+        "relatedTo": "afeastforcrows",
+        "weight": 1
+    },
+    {
+        "origin": "astormofswords",
+        "relatedTo": "adancewithdragons",
+        "weight": 2
+    },
+    {
+        "origin": "afeastforcrows",
+        "relatedTo": "agameofthrones",
+        "weight": 2
+    },
+    {
+        "origin": "afeastforcrows",
+        "relatedTo": "aclashofkings",
+        "weight": 2
+    },
+    {
+        "origin": "afeastforcrows",
+        "relatedTo": "astormofswords",
+        "weight": 1
+    },
+    {
+        "origin": "afeastforcrows",
+        "relatedTo": "adancewithdragons",
+        "weight": 1
+    },
+    {
+        "origin": "adancewithdragons",
+        "relatedTo": "agameofthrones",
+        "weight": 2
+    },
+    {
+        "origin": "adancewithdragons",
+        "relatedTo": "aclashofkings",
+        "weight": 2
+    },
+    {
+        "origin": "adancewithdragons",
+        "relatedTo": "astormofswords",
+        "weight": 2
+    },
+    {
+        "origin": "adancewithdragons",
+        "relatedTo": "afeastforcrows",
+        "weight": 1
+    },
+    {
+        "origin": "neuromancer",
+        "relatedTo": "countzero",
+        "weight": 1
+    },
+    {
+        "origin": "neuromancer",
+        "relatedTo": "monalisaoverdrive",
+        "weight": 2
+    },
+    {
+        "origin": "countzero",
+        "relatedTo": "neuromancer",
+        "weight": 1
+    },
+    {
+        "origin": "countzero",
+        "relatedTo": "monalisaoverdrive",
+        "weight": 1
+    },
+    {
+        "origin": "monalisaoverdrive",
+        "relatedTo": "neuromancer",
+        "weight": 2
+    },
+    {
+        "origin": "monalisaoverdrive",
+        "relatedTo": "countzero",
+        "weight": 1
+    },
+    {
+        "origin": "valis",
+        "relatedTo": "doandroidsdreamofelectricsheep",
+        "weight": 1
+    },
+    {
+        "origin": "valis",
+        "relatedTo": "themaninthehighcastle",
+        "weight": 2
+    },
+    {
+        "origin": "doandroidsdreamofelectricsheep",
+        "relatedTo": "valis",
+        "weight": 1
+    },
+    {
+        "origin": "doandroidsdreamofelectricsheep",
+        "relatedTo": "themaninthehighcastle",
+        "weight": 2
+    },
+    {
+        "origin": "themaninthehighcastle",
+        "relatedTo": "doandroidsdreamofelectricsheep",
+        "weight": 2
+    },
+    {
+        "origin": "themaninthehighcastle",
+        "relatedTo": "valis",
+        "weight": 2
+    },
+    {
+        "origin": "themaninthehighcastle",
+        "relatedTo": "agameofthrones",
+        "weight": 2
+    },
+    {
+        "origin": "agameofthrones",
+        "relatedTo": "themaninthehighcastle",
+        "weight": 2
+    },
+    {
+        "origin": "valis",
+        "relatedTo": "neuromancer",
+        "weight": 2
+    },
+    {
+        "origin": "neuromancer",
+        "relatedTo": "valis",
+        "weight": 2
+    },
+    {
+        "origin": "doandroidsdreamofelectricsheep",
+        "relatedTo": "neuromancer",
+        "weight": 2
+    },
+    {
+        "origin": "neuromancer",
+        "relatedTo": "doandroidsdreamofelectricsheep",
+        "weight": 2
+    }
+]
