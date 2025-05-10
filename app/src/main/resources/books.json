@@ -1,0 +1,68 @@
+[
+    {
+        "id": "agameofthrones",
+        "title": "A Game of Thrones",
+        "releaseYear": 1996,
+        "author": "George R. R. Martin"
+    },
+    {
+        "id": "aclashofkings",
+        "title": "A Clash of Kings",
+        "releaseYear": 1998,
+        "author": "George R. R. Martin"
+    },
+    {
+        "id": "astormofswords",
+        "title": "A Storm of Swords",
+        "releaseYear": 2000,
+        "author": "George R. R. Martin"
+    },
+    {
+        "id": "afeastforcrows",
+        "title": "A Feast for Crows",
+        "releaseYear": 2005,
+        "author": "George R. R. Martin"
+    },
+    {
+        "id": "adancewithdragons",
+        "title": "A Dance with Dragons",
+        "releaseYear": 2011,
+        "author": "George R. R. Martin"
+    },
+    {
+        "id": "neuromancer",
+        "title": "Neuromancer",
+        "releaseYear": 1984,
+        "author": "William Gibson"
+    },
+    {
+        "id": "countzero",
+        "title": "Count Zero",
+        "releaseYear": 1986,
+        "author": "William Gibson"
+    },
+    {
+        "id": "monalisaoverdrive",
+        "title": "Mona Lisa Overdrive",
+        "releaseYear": 1988,
+        "author": "William Gibson"
+    },
+    {
+        "id": "valis",
+        "title": "VALIS",
+        "releaseYear": 1985,
+        "author": "Philip K. Dick"
+    },
+    {
+        "id": "doandroidsdreamofelectricsheep",
+        "title": "Do Androids Dream of Electric Sheep?",
+        "releaseYear": 1968,
+        "author": "Philip K. Dick"
+    },
+    {
+        "id": "themaninthehighcastle",
+        "title": "The Man in the High Castle",
+        "releaseYear": 1963,
+        "author": "Philip K. Dick"
+    }
+]
