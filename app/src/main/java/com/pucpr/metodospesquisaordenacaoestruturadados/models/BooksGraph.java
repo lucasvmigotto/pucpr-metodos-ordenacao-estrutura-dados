@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class BooksGraph {
+public final class BooksGraph {
 
     private ArrayList<Book> books;
     private ArrayList<Relation> relations;
