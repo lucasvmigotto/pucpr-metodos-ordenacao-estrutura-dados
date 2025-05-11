@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ListIterator;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -14,6 +15,7 @@ import com.pucpr.metodospesquisaordenacaoestruturadados.models.Book;
 import com.pucpr.metodospesquisaordenacaoestruturadados.models.BooksGraph;
 import com.pucpr.metodospesquisaordenacaoestruturadados.models.Relation;
 import com.pucpr.metodospesquisaordenacaoestruturadados.utils.DataReader;
+import com.pucpr.metodospesquisaordenacaoestruturadados.utils.Distance;
 
 public class UserInterface {
 
@@ -26,7 +28,8 @@ public class UserInterface {
     private final ArrayList<String> menuOptions = new ArrayList<>(
             Arrays.asList(
                     "Exit",
-                    "Get Suggestions"));
+                    "Get Suggestions",
+                    "Measure Distance"));
 
     private ArrayList<Book> books = null;
     private ArrayList<Relation> relations = null;
@@ -76,21 +79,67 @@ public class UserInterface {
         return menuBuilder.toString();
     }
 
-    private void getSuggestions() throws IOException {
-        Book option = null;
-        String options = this.books.stream().map(
+    private String renderBooksList() {
+        return this.books.stream().map(
                 book -> String.format(
                         "%d - %s by: %s\n",
                         this.books.indexOf(book),
                         book.getTitle(),
                         book.getAuthor()))
                 .collect(Collectors.joining());
+    }
+
+    private void measureDistance() throws IOException {
+        Book option = null;
 
         while (option == null) {
             this.cleanOutput();
 
             try {
-                System.out.println(options);
+                System.out.println(this.renderBooksList());
+
+                System.out.print("Choose a book: ");
+                option = this.books.get(this.userInputReader.nextInt());
+
+                Map<Book, Integer> distances = Distance.djikstra(this.graph.getGraph(), option);
+
+                this.cleanOutput();
+                System.out.println(
+                        String.format(
+                                "Book distances from %s:\n",
+                                option.getTitle()).toCharArray());
+
+                System.out.println(
+                        distances.entrySet()
+                                .stream()
+                                .sorted(Map.Entry.comparingByValue())
+                                .map(
+                                        map -> String.format(
+                                                "\t- %s (Distance %d)\n",
+                                                map.getKey().getTitle(),
+                                                map.getValue()))
+                                .collect(Collectors.joining()));
+
+                System.out.println("\nPress any key to continue...");
+                this.userInputReader.nextLine();
+
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Invalid option. Press any key to continue...");
+                this.userInputReader.nextLine();
+            }
+
+        }
+
+    }
+
+    private void getSuggestions() throws IOException {
+        Book option = null;
+
+        while (option == null) {
+            this.cleanOutput();
+
+            try {
+                System.out.println(this.renderBooksList());
 
                 System.out.print("Choose a book: ");
                 option = this.books.get(this.userInputReader.nextInt());
@@ -116,7 +165,6 @@ public class UserInterface {
             }
 
         }
-
     }
 
     private int menu() {
@@ -135,6 +183,11 @@ public class UserInterface {
                     case 1:
                         this.getSuggestions();
                         break;
+
+                    case 2:
+                        this.measureDistance();
+                        break;
+
                     case 0:
                     default:
                         return this.exitCode;
